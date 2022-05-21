@@ -1,7 +1,7 @@
 {
-  "name": "Github Page PWA",
-  "short_name": "GPPWA",
-  "description": "Github Page as a Progressive Web App",
+  "name": "Presentazione sul Li-Fi",
+  "short_name": "Li-Fi",
+  "description": "Presentazione sul Li-Fi con sfondo interattivo (particle-js)",
   "scope": "/lifi/",
   "start_url": "/lifi/",
   "background_color": "#ffffff",
@@ -11,7 +11,7 @@
       {
         "src": "/lifi/images/icon.png",
         "type": "image/png",
-        "sizes": "700x700"
+        "sizes": "512x512"
       }
   ]
 }
