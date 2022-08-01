@@ -6,6 +6,9 @@
     <meta charset="utf-8" />
     <meta name="description" content="Presentazione sul Li-Fi">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="canonical" href="https://lumarans30.github.io/lifi/" />
     <link rel="manifest" href="/lifi/manifest.webmanifest">
     <!-- Foglio CSS esterno (cartella css) -->
@@ -61,7 +64,8 @@
     <div class="d-flex flex-column flex-shrink-0 p-4">
         <h1 class="sectionTitle" id="home" style="margin-top: 50px;">LI-FI</h1>
         <div class="container">
-            <h2 class="title">Cos'è?
+            <h2 class="title">
+                Cos'è?
                 <i class="fa-solid fa-lightbulb-gradient fa-lightbulb"></i>
             </h2>
 
@@ -99,21 +103,21 @@
                     <figure>
                         <!-- immagine dei vari tipi di Li-Fi con etichetta di descrizione -->
                         <img class="rounded img-responsive" alt="Li-Fi G" src="images/lifiG.webp" height="300"
-                            width="324"> <!-- Ogni immagine è responsive -->
+                             width="324"> <!-- Ogni immagine è responsive -->
                         <figcaption>Li-Fi G</figcaption>
                     </figure>
                 </div>
                 <div class="col-lg-3">
                     <figure>
                         <img class="rounded img-responsive" alt="Li-Fi S" src="images/lifiS.webp" height="300"
-                            width="300">
+                             width="300">
                         <figcaption>Li-Fi S</figcaption>
                     </figure>
                 </div>
                 <div class="col-lg-3">
                     <figure>
                         <img style="margin-left:20px" alt="Li-Fi P" class="rounded img-responsive"
-                            src="images/lifiP.webp" height="300" width="300">
+                             src="images/lifiP.webp" height="300" width="300">
                         <figcaption>Li-Fi P</figcaption>
                     </figure>
                 </div>
@@ -123,49 +127,49 @@
                 <!--Tipi di Li-Fi-->
                 Il Li-Fi può essere di tre tipi:
                 <br>
-            <ul>
-                <!-- Elenco puntato (lista non ordinata) -->
-                <li>
-                    <strong>Li-Fi G</strong> <!-- Strong: grassetto-->
-                    <br> <!-- br: linea a capo -->
-                </li>
-                <li>
-                    <strong>Li-Fi S</strong>
-                    <br>
-                </li>
-                <li>
-                    <strong>Li-Fi P</strong>
-                    <br>
-                </li>
-            </ul>
+                <ul>
+                    <!-- Elenco puntato (lista non ordinata) -->
+                    <li>
+                        <strong>Li-Fi G</strong> <!-- Strong: grassetto-->
+                        <br> <!-- br: linea a capo -->
+                    </li>
+                    <li>
+                        <strong>Li-Fi S</strong>
+                        <br>
+                    </li>
+                    <li>
+                        <strong>Li-Fi P</strong>
+                        <br>
+                    </li>
+                </ul>
 
 
-            Il <strong>Li-fi G</strong> è una versione di Li-Fi che utilizza un fascio di luce solamente nello spettro
-            del visibile per trasmettere
-            la posizione dell'utente con margine d'errore di soli 2 cm.
-            <br>
-            Oltre a trasmettere dati illumina anche l'ambiente circostante.
-            <br>
-            A differenza del Li-Fi S permette solo la trasmissione di informazioni e non la ricezione.
-            <br>
-            La ricezione avviene tramite un cellulare o tablet dotati di fotocamera e dell'app Li-Fi Zone.
-            <br><br>
-            Il <strong>Li-fi S</strong> viene invece utilizzato per la connettere i dispositivi ad internet in un luogo
-            chiuso.
-            <br>
-            A differenza degli altri tipi di Li-Fi è che il collegamento è bidirezionale quindi permette la trasmissione
-            e la
-            ricezione di dati simulaneamente.
-            <br>
-            Per la trasmissione dei dati bisogna collegare ciascun dispositivo ad un ricevitore e il trasmettitore ad
-            infrarossi ad
-            uno switch o router.
-            <br><br>
-            Infine il <strong>Li-fi P</strong> permette la comunicazione tra due infrastrutture distanti tra di loro
-            tramite un fascio laser invece
-            di un ponte radio o cablaggi.
-            <br>
-            A differenza degli altri tipi la velocità di trasmissione può arrivare fino a 10Gbps.
+                Il <strong>Li-fi G</strong> è una versione di Li-Fi che utilizza un fascio di luce solamente nello spettro
+                del visibile per trasmettere
+                la posizione dell'utente con margine d'errore di soli 2 cm.
+                <br>
+                Oltre a trasmettere dati illumina anche l'ambiente circostante.
+                <br>
+                A differenza del Li-Fi S permette solo la trasmissione di informazioni e non la ricezione.
+                <br>
+                La ricezione avviene tramite un cellulare o tablet dotati di fotocamera e dell'app Li-Fi Zone.
+                <br><br>
+                Il <strong>Li-fi S</strong> viene invece utilizzato per la connettere i dispositivi ad internet in un luogo
+                chiuso.
+                <br>
+                A differenza degli altri tipi di Li-Fi è che il collegamento è bidirezionale quindi permette la trasmissione
+                e la
+                ricezione di dati simulaneamente.
+                <br>
+                Per la trasmissione dei dati bisogna collegare ciascun dispositivo ad un ricevitore e il trasmettitore ad
+                infrarossi ad
+                uno switch o router.
+                <br><br>
+                Infine il <strong>Li-fi P</strong> permette la comunicazione tra due infrastrutture distanti tra di loro
+                tramite un fascio laser invece
+                di un ponte radio o cablaggi.
+                <br>
+                A differenza degli altri tipi la velocità di trasmissione può arrivare fino a 10Gbps.
 
             </p>
 
@@ -183,10 +187,12 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vantaggi
+                            <th scope="col">
+                                Vantaggi
                                 <i class="fas fa-thumbs-up"></i>
                             </th>
-                            <th scope="col">Svantaggi
+                            <th scope="col">
+                                Svantaggi
                                 <i class="fas fa-thumbs-down"></i>
                             </th>
                         </tr>
@@ -326,6 +332,23 @@
             </iframe>
         </div>
     </div>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+        }
+    </script>
     <script>
         if (navigator.serviceWorker) {
             navigator.serviceWorker.register(
