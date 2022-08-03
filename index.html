@@ -6,8 +6,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Presentazione sul Li-Fi">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="canonical" href="https://lumarans30.github.io/lifi/" />
     <link rel="manifest" href="/lifi/manifest.webmanifest">
@@ -339,37 +338,21 @@
         </div>
     </div>
 
-    <div id="google_translate_element"></div>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: 'en' },
-                'google_translate_element'
-            );
-        }
-    </script>
-
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
-        cb=googleTranslateElementInit">
-    </script>
-
     <script>
-        function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            var profile = googleUser.getBasicProfile();
-            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
-
-            // The ID token you need to pass to your backend:
-            var id_token = googleUser.getAuthResponse().id_token;
-            console.log("ID Token: " + id_token);
+        function handleCredentialResponse(response) {
+            // Here we can do whatever process with the response we want
+            // Note that response.credential is a JWT ID token
+            console.log("Encoded JWT ID token: " + response.credential);
         }
     </script>
+
+    <div id="g_id_onload"
+         data-client_id="323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse"
+         data-your_own_param_1_to_login="any_value"
+         data-your_own_param_2_to_login="any_value">
+    </div>
+
     <script>
         if (navigator.serviceWorker) {
             navigator.serviceWorker.register(
