@@ -17,3 +17,9 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register(
+        '/lifi/sw.js',
+        { scope: '/lifi/' }
+    )
+}
