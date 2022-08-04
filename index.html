@@ -7,6 +7,7 @@
     <meta name="description" content="Presentazione sul Li-Fi">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -61,13 +62,7 @@
             </a>
         </li>
         <li id="navItem">
-            <a class="oauth-container btn darken-4 white black-text" href="/users/google-oauth/" style="text-transform:none">
-                <div class="left">
-                    <img width="20px" style="margin-top:7px; margin-right:8px" alt="Google sign-in"
-                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                </div>
-                Login with Google
-            </a>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
         </li>
     </nav>
 
