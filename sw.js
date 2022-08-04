@@ -1,4 +1,4 @@
-/*var GHPATH = '/lifi';
+var GHPATH = '/lifi';
 var APP_PREFIX = 'gppwa_';
 var VERSION = 'version_002';
 var URLS = [    
@@ -49,4 +49,4 @@ self.addEventListener('activate', function (e) {
       }))
     })
   )
-})*/
+})
