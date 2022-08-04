@@ -62,14 +62,7 @@
             </a>
         </li>
         <li class="navItem">
-            <div class="g_id_signin"
-                 data-type="standard"
-                 data-size="large"
-                 data-theme="outline"
-                 data-text="sign_in_with"
-                 data-shape="rectangular"
-                 data-logo_alignment="left">
-            </div>
+            <div id="google-signin-customButton"></div>
         </li>
     </nav>
 
@@ -346,32 +339,35 @@
         </div>
     </div>
 
-    <div id="g_id_onload"
-         data-client_id="323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com"
-         data-context="signin"
-         data-state_cookie_domain="https://lumarans30.github.io"
-         data-login_uri="https://lumarans30.github.io/lifi/"
-         data-auto_select="true"
-         data-cancel_on_tap_outside="false"
-         data-callback="onSignIn">
-    </div>
-
     <script>
-        function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            console.log(googleUser);
-            var profile = googleUser.getBasicProfile();
+
+        function handleCredentialResponse(response)
+        {     
+            var profile = response.getBasicProfile();
             console.log("ID: " + profile.getId()); // Don't send this directly to your server!
             console.log('Full Name: ' + profile.getName());
             console.log('Given Name: ' + profile.getGivenName());
             console.log('Family Name: ' + profile.getFamilyName());
             console.log("Image URL: " + profile.getImageUrl());
             console.log("Email: " + profile.getEmail());
-
-            // The ID token you need to pass to your backend:
-            var id_token = googleUser.getAuthResponse().id_token;
-            console.log("ID Token: " + id_token);
+            console.log("ID token: " + response.credential);
         }
+
+        window.onload = function ()
+        {
+            google.accounts.id.initialize({
+                client_id: "323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com",
+                callback: handleCredentialResponse
+            });
+
+            google.accounts.id.renderButton(
+                document.getElementById("google-signin-customButton"),
+                { theme: "outline", size: "large" }  // customization attributes
+            );
+
+            google.accounts.id.prompt(); // also display the One Tap dialog
+        }
+
     </script>
        
 </body>
