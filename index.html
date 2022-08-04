@@ -7,6 +7,7 @@
     <meta name="description" content="Presentazione sul Li-Fi">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <meta name="google-signin-client_id" content="323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link rel="canonical" href="https://lumarans30.github.io/lifi/" />
@@ -21,6 +22,7 @@
     <script src="js/particles.js"></script>
     <!-- carico le particelle nella pagina -->
     <script src="js/app.js"></script>
+
 </head>
 
 <body class="text-light bg-dark">
@@ -57,6 +59,9 @@
                 <!-- icona di fontawesome che rimanda alla mia pagina github -->
                 <i class="fab fa-github fa-github-gradient fa-2x"></i>
             </a>
+        </li>
+        <li id="navItem">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </li>
     </nav>
 
