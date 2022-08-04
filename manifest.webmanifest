@@ -3,7 +3,7 @@
   "short_name": "Li-Fi",
   "description": "Presentazione sul Li-Fi con sfondo interattivo (particle-js)",
   "scope": "/lifi/",
-  "start_url": "/lifi/",
+  "start_url": "/lifi/index.html",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone", 
