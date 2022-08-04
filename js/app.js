@@ -23,7 +23,7 @@ var googleUser; // The current user
 
 gapi.load('auth2', function () {
     auth2 = gapi.auth2.init({
-        client_id: 'your-app-id.apps.googleusercontent.com'
+        client_id: '323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com'
     });
     auth2.attachClickHandler('signin-button', {}, onSuccess, onFailure);
 
