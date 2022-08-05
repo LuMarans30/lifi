@@ -61,9 +61,6 @@
                 <i class="fab fa-github fa-github-gradient fa-2x"></i>
             </a>
         </li>
-        <li class="navItem">
-            <div id="google-signin-customButton"></div>
-        </li>
     </nav>
 
     <!-- Contenitore per rendere responsive il paragrafo (bootstrap) -->
@@ -352,11 +349,6 @@
                 client_id: "323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com",
                 callback: handleCredentialResponse
             });
-
-            google.accounts.id.renderButton(
-                document.getElementById("google-signin-customButton"),
-                { theme: "outline", size: "large" }  // customization attributes
-            );
 
             google.accounts.id.prompt(); // also display the One Tap dialog
         }
