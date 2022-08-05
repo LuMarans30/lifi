@@ -338,12 +338,18 @@
 
     <script>
 
+        import jwt_decode from 'jwt-decode';
+
         function handleCredentialResponse(response)
         {     
             console.log("ID token: " + response.credential);
-            console.log("First name: " + response.given_name);
-            console.log("Last name: " + response.family_name);
-            console.log("Email: " + response.email);
+
+            if (response.credential != null)
+            {
+                var decoded = jwt_decode(response.credential);
+                console.log(decoded);
+            }
+            
         }
 
         window.onload = function ()
