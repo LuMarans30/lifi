@@ -39,8 +39,7 @@ function handleCredentialResponse(response)
         console.log(algorithmTokenType);
         var data = JSON.parse(atob(response.credential.split(".")[1]));
         console.log(data);
-        var nd = JSON.parse(atob(response.credential.split(".")[2]));
-        console.log(nd);
+        var signature = response.credential.split(".")[2];
 
     } catch (e) {
 
