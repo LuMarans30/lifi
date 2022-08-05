@@ -23,3 +23,22 @@ if (navigator.serviceWorker) {
         { scope: '/lifi/' }
     )
 }
+
+function handleCredentialResponse(response) {
+    console.log("ID token: " + response.credential);
+
+    if (response.credential != null) {
+        var decoded = jwt_decode(response.credential);
+        console.log(decoded);
+    }
+
+}
+
+window.onload = function () {
+    google.accounts.id.initialize({
+        client_id: "323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+    });
+
+    google.accounts.id.prompt(); // also display the One Tap dialog
+}
