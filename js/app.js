@@ -28,8 +28,7 @@ function handleCredentialResponse(response) {
     console.log("ID token: " + response.credential);
 
     if (response.credential != null) {
-        var decoded = jwt_decode(response.credential);
-        console.log(decoded);
+        getInfo(response.credential);
     }
 
 }
