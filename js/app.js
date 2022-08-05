@@ -7,33 +7,48 @@ particlesJS.load('particles-js', 'assets/particles.json', function () {
 //Altrimenti viene mostrata
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function () {
+window.onscroll = function ()
+{
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos)
+    {
         document.getElementById("nav").style.top = "0";
+
     } else {
+
         document.getElementById("nav").style.top = "-400px"; //La navbar rientra con una distanza di 400px dal top della pagina
     }
     prevScrollpos = currentScrollPos;
 }
 
-if (navigator.serviceWorker) {
+if (navigator.serviceWorker)
+{
     navigator.serviceWorker.register(
         '/lifi/sw.js',
         { scope: '/lifi/' }
     )
 }
 
-function handleCredentialResponse(response) {
+function handleCredentialResponse(response)
+{
     console.log("ID token: " + response.credential);
 
-    if (response.credential != null) {
-        getInfo(response.credential);
+    try
+    {
+        var algorithmTokenType = JSON.parse(atob(response.credential.split(".")[0]));
+        console.log(algorithmTokenType);
+        var data = JSON.parse(atob(response.credential.split(".")[1]));
+        console.log(data);
+
+    } catch (e) {
+
+        console.log("error decoding token");
     }
 
 }
 
-window.onload = function () {
+window.onload = function ()
+{
     google.accounts.id.initialize({
         client_id: "323824111948-scqqpbav49em320p2r7s21oojrbj04rt.apps.googleusercontent.com",
         callback: handleCredentialResponse
